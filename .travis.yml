@@ -3,4 +3,4 @@ services:
 
 before_install:
   - docker build -f Dockerfile.dev -t salimdewani/dockerapp .
-  - docker run salimdewani/dockerapp npm test -- --coverage
+  - docker run -e CI=true salimdewani/dockerapp npm run test
