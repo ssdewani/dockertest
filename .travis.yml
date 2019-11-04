@@ -1,0 +1,6 @@
+services:
+  - docker
+
+before_install:
+  - docker build -f Dockerfile.dev -t salimdewani/dockerapp .
+  - docker run salimdewani/dockerapp npm test
